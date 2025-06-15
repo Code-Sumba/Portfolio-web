@@ -1,0 +1,208 @@
+/* My Skills page styles */
+
+.skills-container {
+  padding: 20px 0;
+}
+
+.page-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 40px;
+  color: #333;
+  position: relative;
+}
+
+.page-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background-color: #4285f4;
+}
+
+/* Skills intro section */
+.skills-intro {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+  font-size: 1.1rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Skills section styles */
+.skills-section {
+  margin-bottom: 60px;
+}
+
+.section-title {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  color: #333;
+  text-align: center;
+  position: relative;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: #4285f4;
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.skill-item {
+  margin-bottom: 25px;
+}
+
+.skill-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.skill-name {
+  font-weight: bold;
+  color: #333;
+}
+
+.skill-percentage {
+  color: #4285f4;
+  font-weight: bold;
+}
+
+.skill-bar {
+  height: 10px;
+  background-color: #e0e0e0;
+  border-radius: 5px;
+  overflow: hidden;
+}
+
+.skill-progress {
+  height: 100%;
+  background-color: #4285f4;
+  border-radius: 5px;
+  transition: width 1s ease-in-out;
+}
+
+/* Technologies section styles */
+.technologies-section {
+  padding: 60px 0;
+  background-color: #f8f9fa;
+  border-radius: 10px;
+  margin-bottom: 60px;
+}
+
+.technologies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 30px;
+  padding: 0 20px;
+}
+
+.technology-card {
+  background-color: white;
+  padding: 30px 20px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.technology-card:hover {
+  transform: translateY(-10px);
+}
+
+.technology-icon {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.technology-name {
+  font-size: 1.3rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.technology-description {
+  color: #666;
+  line-height: 1.6;
+  font-size: 0.9rem;
+}
+
+/* Learning section styles */
+.learning-section {
+  max-width: 800px;
+  margin: 0 auto 60px;
+  padding: 0 20px;
+}
+
+.learning-content {
+  background-color: white;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.learning-content p {
+  margin-bottom: 20px;
+  line-height: 1.6;
+  color: #555;
+}
+
+.learning-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.learning-item {
+  padding: 10px 0;
+  border-bottom: 1px solid #e0e0e0;
+  color: #555;
+  position: relative;
+  padding-left: 25px;
+}
+
+.learning-item:last-child {
+  border-bottom: none;
+}
+
+.learning-item::before {
+  content: '🔹';
+  position: absolute;
+  left: 0;
+  color: #4285f4;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .skills-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .technologies-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+}

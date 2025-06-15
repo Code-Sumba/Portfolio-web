@@ -1,0 +1,239 @@
+/* My Navbar styles */
+
+.navbar {
+  background-color: #333;
+  height: 80px;
+  display: flex;
+  justify-content: flex-start; /* Changed from center to flex-start */
+  align-items: center;
+  position: sticky;
+  top: 0;
+  z-index: 999; /* This makes sure navbar stays on top of other content */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 0 30px;
+  margin-left: 30px; /* Added left margin */
+  position: relative;
+  z-index: 1000;
+}
+
+.navbar-logo {
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo:hover {
+  color: #4285f4;
+}
+
+.nav-menu {
+  display: flex;
+  list-style: none;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  transition: all 0.4s ease;
+}
+
+.nav-item {
+  height: 80px;
+  padding: 0 15px;
+  position: relative;
+}
+
+.nav-link {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  height: 100%;
+  padding: 0 1rem;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background-color: #4285f4;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 70%;
+}
+
+.nav-link:hover, .nav-link.active {
+  color: #4285f4; /* Google blue color */
+}
+
+.nav-icon {
+  margin-right: 8px;
+  font-size: 1.1rem;
+}
+
+/* This hides the hamburger menu on desktop */
+.menu-icon {
+  display: none;
+}
+
+/* Menu overlay for mobile */
+.menu-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 998;
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* This is for mobile screens */
+@media screen and (max-width: 960px) {
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    opacity: 0;
+    transition: all 0.5s ease;
+    background-color: #333;
+    padding-top: 80px;
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.2);
+  }
+
+  /* This shows the menu when it's active */
+  .nav-menu.active {
+    right: 0;
+    opacity: 1;
+    transition: all 0.5s ease;
+    z-index: 997;
+  }
+  
+  .menu-overlay.active {
+    display: block;
+    opacity: 1;
+  }
+
+  .nav-item {
+    height: auto;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    width: 100%;
+  }
+
+  .nav-link {
+    text-align: center;
+    padding: 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 1.1rem;
+  }
+  
+  .nav-link::after {
+    display: none;
+  }
+  
+  .nav-link.active {
+    background-color: rgba(66, 133, 244, 0.2);
+    border-left: 4px solid #4285f4;
+    padding-left: calc(1rem - 4px);
+  }
+  
+  .nav-icon {
+    margin-right: 15px;
+    font-size: 1.2rem;
+    width: 20px;
+    text-align: center;
+  }
+
+  /* This shows the hamburger menu on mobile */
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #fff;
+    transition: color 0.3s ease;
+    z-index: 1001;
+  }
+  
+  .menu-icon:hover {
+    color: #4285f4;
+  }
+  
+  .navbar-logo {
+    font-size: 1.7rem;
+    padding-left: 10px;
+    z-index: 1001;
+  }
+}
+
+/* Small mobile screens */
+@media screen and (max-width: 480px) {
+  .navbar {
+    height: 70px;
+  }
+  
+  .navbar-container {
+    padding: 0 20px;
+  }
+  
+  .nav-menu {
+    width: 85%;
+    padding-top: 70px;
+  }
+  
+  .navbar-logo {
+    font-size: 1.5rem;
+  }
+  
+  .menu-icon {
+    transform: translate(-80%, 50%);
+    font-size: 1.5rem;
+  }
+  
+  .nav-item {
+    padding: 15px 0;
+  }
+  
+  .nav-link {
+    font-size: 1rem;
+  }
+  
+  .nav-icon {
+    font-size: 1.1rem;
+  }
+}

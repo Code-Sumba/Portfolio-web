@@ -1,0 +1,189 @@
+/* My first CSS file for my React portfolio! */
+
+/* This styles the whole app */
+.app {
+  font-family: Arial, sans-serif;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+}
+
+/* This is for the main content area */
+.main-content {
+  min-height: 80vh; /* This makes sure the content area is tall enough */
+  padding: 0;
+  background-color: white;
+  border-radius: 0;
+  box-shadow: none; /* Removed shadow effect */
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+/* These are my button styles */
+.button {
+  background-color: #4285f4; /* Google blue color */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer; /* This changes the cursor to a hand when hovering */
+  font-size: 16px;
+  transition: background-color 0.3s; /* This makes the color change smoothly */
+}
+
+.button:hover {
+  background-color: #3367d6; /* Darker blue when hovering */
+}
+
+/* These are my section styles */
+.section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+}
+
+.section-title {
+  color: #4285f4;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+/* These are my card styles */
+.card {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.card-title {
+  font-size: 20px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-content {
+  color: #666;
+}
+
+/* These are my grid styles */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* This creates 3 equal columns */
+  gap: 20px; /* This adds space between grid items */
+}
+
+/* These are my responsive styles */
+@media screen and (max-width: 1200px) {
+  .app {
+    max-width: 100%;
+    padding: 15px;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr); /* This changes to 2 columns on medium screens */
+  }
+  
+  .main-content {
+    padding: 15px;
+  }
+  
+  .section-title {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .grid {
+    grid-template-columns: 1fr; /* This changes to 1 column on small screens */
+  }
+  
+  .main-content {
+    padding: 10px;
+  }
+  
+  .button {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  
+  .section {
+    padding: 15px;
+  }
+  
+  .section-title {
+    font-size: 20px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .app {
+    padding: 10px;
+  }
+  
+  .main-content {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .card {
+    padding: 15px;
+  }
+  
+  .card-title {
+    font-size: 18px;
+  }
+}
+
+.section-title {
+  color: #4285f4;
+  font-size: 24px;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+/* This is for my profile picture */
+.profile-pic {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%; /* This makes it circular */
+  object-fit: cover; /* This makes sure the image covers the area nicely */
+  border: 5px solid #4285f4;
+}
+
+/* This is for my skills list */
+.skills-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.skill-item {
+  background-color: #e8f0fe;
+  padding: 8px 15px;
+  border-radius: 20px;
+  font-size: 14px;
+  color: #4285f4;
+}
+
+/* Media query for mobile phones */
+@media (max-width: 768px) {
+  .app {
+    padding: 10px;
+  }
+  
+  .main-content {
+    padding: 15px;
+  }
+  
+  .profile-pic {
+    width: 150px;
+    height: 150px;
+  }
+}
